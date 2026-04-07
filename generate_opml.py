@@ -31,7 +31,7 @@ def build_opml(rows):
     for region in sorted(by_region):
         region_el = ET.SubElement(body, "outline", text=region, title=region)
         for medio in sorted(by_region[region], key=lambda m: m["nombre"]):
-            url = medio["url"].rstrip("/")
+            url = medio["url"].strip().rstrip("/")
             ET.SubElement(
                 region_el,
                 "outline",
