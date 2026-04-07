@@ -2,9 +2,12 @@
 <opml version="2.0">
   <head>
     <title>Medios Regionales Chile</title>
-    <dateCreated>Tue, 07 Apr 2026 19:13:57 +0000</dateCreated>
+    <dateCreated>Tue, 07 Apr 2026 19:32:56 +0000</dateCreated>
   </head>
   <body>
+    <outline text=" Valparaíso" title=" Valparaíso">
+      <outline text="El Martutino" title="El Martutino" type="rss" xmlUrl="https://www.elmartutino.cl/feed" htmlUrl="https://www.elmartutino.cl" />
+    </outline>
     <outline text="Antofagasta" title="Antofagasta">
       <outline text="Antofacity" title="Antofacity" type="rss" xmlUrl="https://www.antofacity.com/feed" htmlUrl="https://www.antofacity.com" />
       <outline text="Calama en Línea" title="Calama en Línea" type="rss" xmlUrl="https://noticias.calamaenlinea.cl/feed" htmlUrl="https://noticias.calamaenlinea.cl" />
