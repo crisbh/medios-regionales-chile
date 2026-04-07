@@ -70,10 +70,14 @@ def main():
     tree = ET.ElementTree(opml)
     ET.indent(tree, space="  ")  # Python 3.9+
 
+    from io import StringIO
+    buf = StringIO()
+    buf.write('<?xml version="1.0" ?>\n')
+    tree.write(buf, encoding="unicode", xml_declaration=False)
+    buf.write("\n")
+
     with open(OPML_FILE, "w", encoding="utf-8") as f:
-        f.write('<?xml version="1.0" ?>\n')
-        tree.write(f, encoding="unicode", xml_declaration=False)
-        f.write("\n")
+        f.write(buf.getvalue().replace(" />", "/>"))
 
     total = sum(1 for r in rows)
     regions = len({r["region"] for r in rows})
