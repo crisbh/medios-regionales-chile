@@ -96,12 +96,17 @@ Diario El Longino,Tarapacá,https://diariolongino.cl,Regional
 ## 🤝 Cómo contribuir
 
 ### Agregar un medio
+
+El archivo `medios_final.csv` es el archivo fuente de información. El archivo `medios_chile.opml` se genera automáticamente al hacer merge a `main` — **no lo edites a mano**.
+
 1. Haz fork del repositorio
 2. Edita `medios_final.csv` agregando una línea:
    ```
    Nombre del medio,Región,https://url-del-medio.cl,Regional
    ```
 3. Envía un Pull Request con una breve descripción del medio
+
+Una vez que el PR sea aprobado y mergeado, el archivo OPML se actualiza solo.
 
 ### Reportar un medio caído
 Abre un [Issue](../../issues) con el nombre del medio y la URL correcta si la conoces.
@@ -120,4 +125,4 @@ Libre uso bajo licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/
 
 ---
 
-*Última actualización: marzo 2026*
+*Última actualización: abril 2026*

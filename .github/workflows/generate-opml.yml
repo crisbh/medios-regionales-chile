@@ -1,0 +1,24 @@
+name: Generar OPML
+
+on:
+  push:
+    branches: [main]
+    paths: [medios_final.csv]
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generar OPML desde CSV
+        run: python generate_opml.py
+
+      - name: Commit OPML si hay cambios
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-generate medios_chile.opml from CSV"
+          file_pattern: medios_chile.opml
